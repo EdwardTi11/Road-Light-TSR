@@ -33,11 +33,11 @@ RoadLightTSR/
 
 | Metric                    | Value       |
 | ------------------------- | ----------- |
-| Test Accuracy             | **93.76%**  |
-| Test Loss                 | **0.2727**  |
-| Median Inference Latency  | **0.75 ms** |
-| Average Inference Latency | **0.92 ms** |
-| Total Parameters          | **44,715**  |
+| Test Accuracy             | **93.84%**  |
+| Test Loss                 | **0.274**  |
+| Median Inference Latency  | **0.76 ms** |
+| Average Inference Latency | **0.87 ms** |
+| Total Parameters          | **44,651**  |
 | Input Resolution          | **26×26×3** |
 | Number of Classes         | **43**      |
 
@@ -89,7 +89,9 @@ Input (26×26×3)
 | Conv2D             |      9,248 |
 | BatchNormalization |        128 |
 | Dense              |     34,443 |
-| **Total**          | **44,715** |
+| **Total model params** | 44,715   |
+| **Non-trainable** params: | 64    |
+| **Trainable model params (model size)** | 44,651 |
 
 ---
 
