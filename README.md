@@ -22,9 +22,7 @@ RoadLightTSR/
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
-│
-└── assets/
-    └── confusion_matrix.png
+
 ```
 
 ---
@@ -33,12 +31,10 @@ RoadLightTSR/
 
 | Metric                    | Value       |
 | ------------------------- | ----------- |
-| Test Accuracy             | **93.84%**  |
-| Test Loss                 | **0.274**  |
-| Median Inference Latency  | **0.76 ms** |
-| Average Inference Latency | **0.87 ms** |
-| Total Parameters          | **44,651**  |
-| Input Resolution          | **26×26×3** |
+| Test Accuracy             | **94.1%**  |
+| Test Loss                 | **0.2987**  |
+| Median Inference Latency  | **0.61 ms** |
+| Total Parameters          | **44,715**  |
 | Number of Classes         | **43**      |
 
 ---
@@ -51,7 +47,7 @@ This project uses the **German Traffic Sign Recognition Benchmark (GTSRB)** stre
 
 * 43 traffic sign classes
 * 39,209 training images
-* 12,630 test images
+* 7,537 test images (subset of official one with 12,360 images)
 * RGB images with varying resolutions
 * Images resized to 26 × 26 before training
 
@@ -77,6 +73,7 @@ Input (26×26×3)
 ├── MaxPooling2D
 │
 ├── Flatten
+├── Dropout
 │
 └── Dense (43, Softmax)
 ```
