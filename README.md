@@ -96,8 +96,8 @@ Input (26×26×3)
 
 | Parameter             | Value                           |
 | --------------------- | ------------------------------- |
-| Epochs                | 12                              |
-| Batch Size            | 128                             |
+| Epochs (with Early Stopping)                | 23                              |
+| Batch Size            | 64                             |
 | Optimizer             | Adam                            |
 | Scheduler             | Cosine Decay                    |
 | Initial Learning Rate | 0.001                           |
@@ -113,28 +113,12 @@ Inference latency is measured after a warm-up phase using TensorFlow graph execu
 compiled_model = tf.function(model)
 ```
 
-### Benchmark Configuration
-
-* Warmup samples: 20
-* Measurement samples: 500
-* Batch size: 1
-
-### Results
-
-```text
-Average Latency: 0.92 ms
-Median Latency: 0.75 ms
-Minimum Latency: 0.60 ms
-Maximum Latency: 3.10 ms
-```
-
 ---
 
 ## 📊 Confusion Matrix
 
-The normalized confusion matrix highlights class-wise performance and common misclassifications.
+The normalized error bar highlights class-wise performance and common misclassifications.
 
-![Confusion Matrix](assets/confusion_matrix.png)
 
 ---
 
