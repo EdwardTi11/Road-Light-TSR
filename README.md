@@ -119,6 +119,7 @@ compiled_model = tf.function(model)
 
 The normalized error bar highlights class-wise performance and common misclassifications.
 
+<img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/861d4536-a1fe-4a75-8681-7f1c7d2e4b5f" />
 
 ---
 
