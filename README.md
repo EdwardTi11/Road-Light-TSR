@@ -11,8 +11,6 @@ Unlike larger transfer-learning approaches, RoadLightTSR prioritizes:
 
 The project demonstrates that compact CNN architectures can achieve strong classification performance while maintaining real-time inference capabilities.
 
----
-
 ## 📁 Repository Structure
 
 ```text
@@ -25,8 +23,6 @@ RoadLightTSR/
 
 ```
 
----
-
 ## 📊 Results
 
 | Metric                    | Value       |
@@ -36,8 +32,6 @@ RoadLightTSR/
 | Median Inference Latency  | **0.61 ms** |
 | Total Parameters          | **44,715**  |
 | Number of Classes         | **43**      |
-
----
 
 ## 🗂 Dataset
 
@@ -55,8 +49,6 @@ This project uses the **German Traffic Sign Recognition Benchmark (GTSRB)** stre
 train_ds = dl.load("hub://activeloop/gtsrb-train")
 test_ds = dl.load("hub://activeloop/gtsrb-test")
 ```
-
----
 
 ## 🧠 Model Architecture
 
@@ -90,8 +82,6 @@ Input (26×26×3)
 | **Non-trainable** params: | 64    |
 | **Trainable model params (model size)** | 44,651 |
 
----
-
 ## ⚙️ Training Configuration
 
 | Parameter             | Value                           |
@@ -103,8 +93,6 @@ Input (26×26×3)
 | Initial Learning Rate | 0.001                           |
 | Loss Function         | Sparse Categorical Crossentropy |
 
----
-
 ## ⏱ Latency Benchmarking
 
 Inference latency is measured after a warm-up phase using TensorFlow graph execution:
@@ -113,15 +101,11 @@ Inference latency is measured after a warm-up phase using TensorFlow graph execu
 compiled_model = tf.function(model)
 ```
 
----
-
-## 📊 Confusion Matrix
+## 📊 Per-Class Accuracy
 
 The normalized error bar highlights class-wise performance and common misclassifications.
 
 <img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/861d4536-a1fe-4a75-8681-7f1c7d2e4b5f" />
-
----
 
 ## 🚀 Installation
 
@@ -158,8 +142,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
 ## ▶️ Running the Project
 
 Launch Jupyter Notebook:
@@ -169,8 +151,6 @@ jupyter notebook ccir.ipynb
 ```
 
 Then execute all notebook cells sequentially to reproduce training, evaluation, latency measurements, and visualizations.
-
----
 
 ## 🛠 Technologies Used
 
@@ -182,18 +162,6 @@ Then execute all notebook cells sequentially to reproduce training, evaluation, 
 * Matplotlib
 * Seaborn
 * Jupyter Notebook
-
----
-
-## 🔮 Future Improvements
-
-* TensorFlow Lite export
-* INT8 quantization
-* ONNX deployment
-* Raspberry Pi benchmarking
-* Real-time webcam traffic sign recognition
-
----
 
 ## 📄 License
 
